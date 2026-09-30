@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#ffffff">
+<title>上傳資料 — Pitcherest</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23ffffff' stroke='%23e7e7e7'/%3E%3Cpath d='M11 23V9h6a4.5 4.5 0 010 9h-6' fill='none' stroke='%239d833e' stroke-width='1.9' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500&family=Noto+Serif+TC:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=2">
+</head>
+<body>
+<div class="upload-app">
+  <header class="topbar">
+    <div class="brand">
+      <a class="wordmark" href="index.html">Pitcherest</a>
+      <span class="sep" aria-hidden="true"></span>
+      <div class="switcher">
+        <button class="switch-btn" id="projectBtn" aria-haspopup="true" aria-expanded="false">
+          <span class="switch-name" id="projectName"></span>
+          <svg class="ico" viewBox="0 0 16 16"><path d="M4 6.5l4 4 4-4"/></svg>
+        </button>
+        <div class="popover project-pop" id="projectPop" hidden></div>
+      </div>
+    </div>
+    <nav class="topnav" aria-label="頁面">
+      <a href="index.html" class="hm">資料庫</a>
+      <a href="upload.html" class="on"><svg class="ico" viewBox="0 0 16 16"><path d="M8 11V3M5 6l3-3 3 3M3 13h10"/></svg>上傳</a>
+    </nav>
+  </header>
+
+  <main class="up-main" id="upMain">
+    <div class="up-wrap">
+      <div class="up-head">
+        <h1>把任何資料，放進同一個共同大腦。</h1>
+        <p>錄音、簡報、文件、圖片，甚至是一個網址，都可以直接放進來。系統會自動判斷類型、部門與主題，並加入資料庫，讓整個團隊都能查到。</p>
+      </div>
+      <div class="stepper" id="stepper" role="tablist">
+        <button role="tab" data-step="1" class="on"><span class="n">1</span><span class="t">上傳檔案</span></button>
+        <button role="tab" data-step="2"><span class="n">2</span><span class="t">備註說明</span></button>
+        <button role="tab" data-step="3"><span class="n">3</span><span class="t">通知對象</span></button>
+      </div>
+      <section class="panel" id="panel"></section>
+    </div>
+  </main>
+
+  <footer class="footnote">此網站為 Pitcherest 的產品概念示範，其中所有專案、人名、品牌與資料皆為虛構的示範資料；自動分類與摘要為示範用的預先設定內容。</footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</div>
+<script src="js/data.js"></script>
+<script src="js/common.js"></script>
+<script src="js/upload.js?v=2"></script>
+</body>
+</html>
